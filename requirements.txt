@@ -1,0 +1,14 @@
+# Python 3.12.4
+accelerate==1.1.1
+beautifulsoup4==4.12.3
+bitsandbytes==0.43.3
+datasets==2.21.0
+fire==0.6.0
+huggingface-hub==0.24.6
+numpy==1.26.4
+peft==0.12.0
+ray==2.34.0
+torch==2.4.0
+transformers==4.46.2
+# trl==0.11.4
+vllm==0.5.5
