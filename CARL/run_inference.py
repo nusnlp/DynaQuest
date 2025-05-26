@@ -90,7 +90,8 @@ identifier_list = [
 for identifier in identifier_list:
 	data_path = f'/path/to/generated/{identifier}/combined_data.json'
 
-	context_mode = 'GWfulltextqa'
+	# context_mode = 'GWfulltextqa'
+	context_mode = 'fulltextqa'
 
 	dsave = f'{output_prefix}_{identifier}_googlesearch.jsonl'
 	print('to save >>', dsave)
@@ -109,7 +110,11 @@ for identifier in identifier_list:
 		inst['type'] = d['type']
 		kk = (d['page'], d['question'])
 
+		# d['context'] includes top-5 full text results from Google Search + Wikipedia
 		context = '\n'.join([ctx for ctx in d['context']]).strip()
+		# context = ' || '.join([ctx for ctx in d['context']]).strip()
+		# context = ' ||\n'.join([ctx for ctx in d['context']]).strip()
+	
 		inst['ref'] =  ' '.join(context.split(' ')[:30000])
 
 		tdata.append(inst)
@@ -159,12 +164,15 @@ for identifier in identifier_list:
 			inst['question'] = td['question']
 			inst['answer'] = td['answer']
 			inst['output'] = raw_output
+
+			# em and f1 here are pre-calibrated and not accurate
 			inst['em'] = compute_exact(td['answer'], inst['output'])
 			inst['f1'] = compute_f1(td['answer'], inst['output'])
 			inst['type'] = td['type']
 			print('>>> ans:', td['answer'])
 			print('>>> raw:', raw_output)
-			print('>>> EM: {:.4f} F1: {:.4f}'.format(inst['em'], inst['f1']))
+			# print('>>> EM: {:.4f} F1: {:.4f}'.format(inst['em'], inst['f1']))
+
 			fout = open(dsave, 'a')
 			json.dump(inst, fout)
 			fout.write('\n')
