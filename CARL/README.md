@@ -2,6 +2,8 @@
 A **C**ontext-**A**ware **R**einforcement **L**earning framework to improve the performance of LLMs on time-sensitive QA.
 
 ### Training
+Download the training data [here](https://drive.google.com/drive/folders/1NeCTWh6OZQ3jkjgLxFxorvbQNE72r93z?usp=drive_link).
+
 Train the base model with CARL
 
 `./run_train.sh`

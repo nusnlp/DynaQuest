@@ -88,7 +88,7 @@ identifier_list = [
 ]
 
 for identifier in identifier_list:
-	data_path = f'/path/to/generated/{identifier}/combined_data.json'
+	data_path = f'/path/to/{identifier}.retrieval.json'
 
 	# context_mode = 'GWfulltextqa'
 	context_mode = 'fulltextqa'
