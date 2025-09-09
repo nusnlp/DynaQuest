@@ -1,4 +1,4 @@
-## DynaQuest
+## DynaQuest  &nbsp;&nbsp;&nbsp; [![paperlink](https://img.shields.io/badge/Paper-ACL&nbsp;Anthology-blue)](https://aclanthology.org/2025.findings-acl.1380.pdf)
 This repository contains the source code for the DynaQuest paper accepted to Findings of ACL 2025.
 > DynaQuest: A Dynamic Question Answering Dataset Reflecting Real-World Knowledge Updates <br>
 > Qian Lin, Junyi Li and Hwee Tou Ng <br>
@@ -22,9 +22,10 @@ If you find this repository useful, please cite this work:
 ```
 @inproceedings{lin-2025-dynaquest,
   author    = "Lin, Qian and Li, Junyi and Ng, Hwee Tou",
-  title     = "DynaQuest: A Dynamic Question Answering Dataset Reflecting Real-World Knowledge Updates",
-  booktitle = "Findings of ACL",
+  title     = "{D}yna{Q}uest: A Dynamic Question Answering Dataset Reflecting Real-World Knowledge Updates",
+  booktitle = "Findings of the Association for Computational Linguistics: ACL 2025",
   year      = "2025",
+  pages     = "26918--26936",
 }
 ```
 
